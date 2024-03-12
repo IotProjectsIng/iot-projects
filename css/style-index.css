@@ -1,0 +1,886 @@
+:root{
+    --pading-encabezado: 100px 0;
+    --primary: #007bff;
+    --color-subtitulos: #00bbf0;
+    --color-fondo: #00204a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenedor_inicio{
+    width: 100%;
+    height: 190vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+
+}
+
+.contenedor_inicio::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes/fondo.png);
+    background-size: cover;
+}
+
+.hero_inicio{
+    position: relative;
+    top: 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.titulo_barra_inicio{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.menu{
+    margin-left: auto;
+}
+
+.navegacion{
+    list-style: none;;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.itemsMenu{
+    padding: 0;
+}
+
+.item{
+    text-decoration: none;
+    color: #Ffffff;
+}
+
+.nav_close{
+    display: var(--show,none);
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_img{
+    display: block;
+    width: 30px;
+}
+
+.hero_banner{
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--pading-encabezado);
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: 1em;
+    padding-right: 15%;
+}
+
+.tituloPrincipal{
+    font-size: 3rem;
+
+}
+
+.eslogan{
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tituloPrincipal, .eslogan{
+    color: #Ffffff;
+}
+
+.parrafo{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #Ffffff;
+    font-weight: bold;
+}
+
+.sobreNosotros, .servicios{
+    display: inline-block;
+    justify-self: start;
+    width: 30%;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: #00bbf0;
+    border: none;
+    border-radius: 30px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.sobreNosotros:hover, .servicios:hover, .boton_lista_campo:hover, .boton_ver_todo:hover, .boton_enviar:hover, .boton_division_escribenos:hover, .boton_enviar_footer:hover{
+    background: orangered;
+}
+
+.contenedor_campos_accion, .contenedor_dispositivos_iot, .contenedor_porque_escogernos, .contenedor_contacto{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.subtitulo{
+    color: var(--color-subtitulos);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.parrafo_main, .parrafo_main_oscuro{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 1% 0;
+}
+
+.subtitulo_campo, .subtitulo_servicio/*, .subtitulo_dispositivo*/{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.campos_accion{
+    /*position: absolute;*/
+    padding-top: 1em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+.campo{
+    background: #f8f9fa;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: 130px 20px 1fr;
+    gap: 10px;
+    justify-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.item_campo, .item_servicio, .item_dispositivo{
+    font-size: 16px;
+    padding: 1%;
+    text-align: left;
+}
+
+.lista_campo, .lista_servicio, .lista_dispositivo{
+    list-style: none;
+    text-align: left;
+}
+
+.boton_lista_campo{
+    padding: 10px 10px;
+    justify-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background: #00bbf0;
+    border-radius: 30px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.boton_ver_todo{
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    background: #00bbf0;
+    border-radius: 30px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.contenedor_servicios, .contenedor_acerca_de_iot_projects, .contenedor_equipo_trabajo{
+    width: 100%;
+    /*height:75vh;*/
+    background: var(--color-fondo);
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.division_servicios{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.parrafo_main_oscuro{
+    color: #ffffff;
+}
+
+.diferentes_servicios{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.serviocios_iot_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    height: 100%;
+}
+
+.servicios_iot_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.caja_servicios{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1em;
+}
+
+.imagen_servicio{
+    padding: 50px 0;
+    width: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.subtitulo_servicio{
+    color: #Ffffff;
+}
+
+.caja_servicio_iot{
+    display: grid;
+    gap: 1em;
+    grid-template-rows: 20px 1fr;
+    background: linear-gradient(to bottom, #002759, #002b64);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.item_servicio{
+    color: #ffffff;
+    text-align: left;
+}
+
+.servicio_arrow{
+    cursor: pointer;
+}
+
+.dispositivos_iot{
+    display: grid;
+    gap: 2em;
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dispositivo_padding{
+    padding: 0;
+    transition: padding .2s;
+    border: 1px solid #00bbf0;
+    border-radius: 6px;
+}
+
+.dispositivo_padding--add{
+    padding-bottom: 30px;
+}
+
+.dispositivo_campo{
+    padding: 0 30px 0 30px;
+    overflow: hidden;
+    /*font-size: 18px;*/
+}
+
+.subtitulo_dispositivo{
+    display: flex;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-fondo);
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.dispositivo_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.dispositivo_arrow--rotate{
+    transform: rotate(180deg)
+}
+
+.dispositivo_img{
+    display: block;
+}
+
+.diferentes_dispositivos_iot{
+    /*text-align: left;*/
+    height: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1em;
+    transition: height .3s;
+}
+
+.dispositivo_campo_iot{
+    background: #f8f9fa;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 20px 90px 1fr;
+    gap: 10px;
+    justify-items: center;
+}
+
+.subtitulo_dispositivo_iot{
+    padding-top: 10px;
+}
+
+.sobre_nosotros{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    gap: 1em;
+}
+
+.logo_img{
+    padding: 30px 0;
+    width: 250px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.division_sobre_nostros{
+    display: grid;
+    grid-template-rows: 1fr 40px 40px;
+    gap: 1em;
+    width: 100%;
+}
+
+.descripcion_cerca_de{
+    display: grid;
+    gap: 1em;
+}
+
+.division_escribenos{
+    width: 30%;
+    margin: 10px auto; 
+}
+
+.boton_division_escribenos{
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    text-decoration: none;
+    background: #00bbf0;
+    margin: 10px auto;
+    padding: 10px 20px;
+    transition: 1s all;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #Ffffff;
+}
+
+.parrafo_contacto{
+    text-align: center;
+}
+
+.subtitulo_iot_projects{
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+    padding: 3px;
+}
+
+.lista_valores{
+    font-size: 16px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.valor{
+    padding: 3px;
+}
+
+.division_porque_escogernos{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.division_porque_escogernos{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    padding-top: 20px;
+    
+}
+
+.razon_escoger{
+    background: #f8f9fa;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: 20px 60px 1fr;
+    gap: 10px;
+    justify-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.subtitulo_escoger{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.parrafo_razon{
+    font-size: 16px;
+    text-align: justify;
+}
+
+.equipo_persona{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 30px 40px 30px;
+}
+
+.descripcion_equipo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1em;
+}
+
+.persona{
+    display: grid;
+    grid-template-rows: 280px 40px 20px;
+    gap: 0.5em;
+    background: #002b64;
+    border-radius: 30px;
+    justify-content: center;
+    padding: 10px 30px 30px 30px;
+    margin: 0 auto;
+}
+
+.foto_persona{
+    padding: 10px 0;
+    width: 250px;
+    object-fit: cover;
+}
+
+.datos_persona{
+    font-size: 18px;
+    color: #Ffffff;
+    text-align: center;
+}
+
+.redes_persona{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10%,auto));
+    gap: 1em;
+}
+
+.division_contacto{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.division_formas_contacto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(48%,auto));
+    gap: 1em;
+    padding: 10px 20px 20px 20px;
+    background: #f8f9fa;
+    border-radius: 30px 
+}
+
+.otras_formas_de_contacto{
+    text-align: left;
+    width: 90%;
+}
+
+.forma_contacto_iot_projects{
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    justify-items: start;
+    gap: 2px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.subtitulo_contacto_iot, .subtitulo_contacto{
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.enviar_correo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.formulario_correo{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.subtitulo_contacto_iot{
+    padding-bottom: 10px;
+}
+
+.inputPadron{
+    background-color: #Ffffff;
+    border-radius: 10px;
+    border-color: #00bbf0;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 5PX;
+}
+
+.boton_enviar{
+    background: #00bbf0;
+    margin: 10px auto;
+    padding: 10px 20px;
+    transition: 1s all;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #Ffffff;
+}
+
+.contenedor_footer{
+    background: var(--color-fondo);
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.division_footer{
+    width: 90%;
+    margin: 0 auto;
+    padding:20px 0
+}
+
+.pricipal_footer{
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00bbf0;
+    padding-bottom: 40px;
+}
+
+.info_footer{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1em;
+}
+
+.subtitulo_footer{
+    font-size: 18px;
+    font-weight: bold;
+    color: #Ffffff;
+}
+
+.navegacion_footer{
+    display: grid;
+    gap: 1em;
+    list-style: none;;
+    padding: 0;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+
+.footer_form{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1em;
+}
+
+.itemasMenu_footer{
+    list-style: none;
+}
+
+.item_footer{
+    color: #Ffffff;
+    text-decoration: none;
+}
+
+.correo_footer{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    justify-items: start;
+}
+
+.footer_correo{
+    background-color: #002b64;
+    border-radius: 10px;
+    border-color: #Ffffff;
+    color: #Ffffff;
+    padding: 10px;
+    margin-bottom: 5PX;
+    width: 100%;
+}
+
+.boton_enviar_footer{
+    background: #00bbf0;
+    margin: 0 auto;
+    padding: 10px 20px;
+    transition: 1s all;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #Ffffff;
+}
+
+.img_footer{
+    width: 150px;
+}
+
+.redes_copy_footer{
+    padding-top: 10px;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    gap: 1em;
+}
+
+.footer_copy{
+    color: #Ffffff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 930px) {
+    .contenedor_inicio{
+        height: 100vh;
+    }
+
+    .contenedor_inicio::before{
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagenes/tablet.png);
+        background-size: cover;
+    }
+
+    .hero_banner{
+       padding: 17.5% 0px;
+       gap: 1.5em;
+    }
+
+    .campos_accion{
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+
+    .item_campo, .item_servicio, .item_dispositivo{
+        padding: 2%;
+    }
+
+    .imagen_servicio{
+        padding: 0;
+        width: 0;
+        display: none;
+    }
+
+    .caja_servicio_iot{
+       width: 100%;
+    }
+
+    .dispositivos_iot{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .diferentes_dispositivos_iot{
+        grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+    }
+
+    .division_escribenos{
+        width: 40%;
+    }
+
+    .navegacion_footer{
+        gap: 5px;
+    }
+
+    .img_footer{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .contenedor_inicio{
+        grid-template-rows: 200px 1fr;
+        height: 100vh;
+    }
+
+    .contenedor_inicio::before{
+        background:#00204a;
+    }
+
+    .hero_inicio{
+        padding-top: 50px;
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+        background-image: url(../imagenes/celular.png);
+        background-size: cover;
+    }
+
+    .titulo_barra_inicio{
+        padding: 0 5%;
+    }
+
+    .menu{
+        margin: 0;
+        padding: 5%;
+    }
+
+    .navegacion{
+        gap: 0.5em;
+    }
+
+    .tituloPrincipal{
+        font-weight: bold;
+    }
+
+    .hero_banner{
+        padding-top: 17.5%;
+        color: #000000;
+    }
+
+    .parrafo{
+        text-align: justify;
+    }
+
+    .sobreNosotros, .servicios{
+        width: 80%;
+    }
+
+    .campos_accion{
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    }
+
+    .diferentes_servicios{
+        grid-template-columns: 17px 1fr 17px;
+    }
+
+    .servicio_arrow{
+        width: 15px;
+    }
+
+    .diferentes_dispositivos_iot{
+        grid-template-columns: repeat(auto-fit,minmax(230px,auto));
+    }
+
+    .division_escribenos{
+        width: 90%;
+    }
+
+    .division_formas_contacto{
+        grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    }
+
+    .pricipal_footer{
+        flex-wrap: wrap;
+    }
+
+    .navegacion_footer{
+        gap: 10px;
+        width: 100%;
+    }
+
+    .subtitulo{
+        width: 90%;
+    }
+
+    .img_footer{
+       display: none;
+    }
+
+    
+}
