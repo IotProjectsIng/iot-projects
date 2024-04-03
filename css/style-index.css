@@ -472,6 +472,11 @@ body{
     overflow: hidden;
 }
 
+.iframe_insta{
+    height: 440px;
+    width: 320px;
+}
+
 
 .equipo_persona{
     width: 90%;
